@@ -16,7 +16,7 @@ body{
   min-height: 100vh;
 }
 
-#card{  
+.card{  
   font-family: 'Red Hat Display', sans-serif;
   width: 380px;
   border-radius: 20px;
@@ -27,7 +27,7 @@ img{
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-#summary{
+.summary{
   margin-top: -5px;
   background-color: white;
   border-bottom-left-radius: 20px;
@@ -35,27 +35,28 @@ img{
   padding: 15px 40px;
   background-color: #fff;
 }
-#summary > p, #summary > h1{
+.summary > p, .summary > h1{
   text-align: center;
 }
-#summary > h1{
+.summary > h1{
+  font-size: 30px;
   padding: 10px 0;
-  font-weight: 700;
+  font-weight: 900;
 }
-#summary > p{
-  padding: 20px 0 10px 0;
+.summary > p{
+  padding: 20px 0 30px 0;
   color: hsl(224, 23%, 55%);
-  font-weight: 500  ;
+  font-weight: 500;
   font-size: 16px;
 }
-#summary .change-link{
+.summary .change-link{
   text-decoration: none;
   font-weight: 700;
 }
-#summary .change-link:active{
+.summary .change-link:active{
   color: #7280A7;
 }
-#plan{
+.plan{
   color: #1F2F56;
   padding: 20px 15px;
   border-radius: 10px;
@@ -64,18 +65,18 @@ img{
   justify-content: space-evenly;
   align-items: center;
 }
-#plan img{
+.plan img{
   width: 45px;
   height: 45px; 
 }
-#plan #price{
+.plan .price{
   margin-right: 30px;
   font-size: 16px;
 }
-#plan h2, #plan p{
+.plan h2, .plan p{
   font-size: 16px;
 }
-#plan p{
+.plan p{
   color: hsl(224, 23%, 55%);
 }
 button{
@@ -109,4 +110,25 @@ button{
  #card{
    max-width: 320px;
  }
+ .summary{
+   padding-left: 10px;
+   padding-right: 10px;
+ }
+ .plan{
+   justify-content: space-around;
+   padding-left: 5px;
+   padding-right: 5px;
+ }
+ .plan .price{
+   margin-right: 40px;
+ }
+}
+@media screen and (max-width: 250px){
+  .plan{
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .plan .price{
+    margin-right: 0;
+  }
 }
